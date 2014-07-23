@@ -1,0 +1,98 @@
+{
+    "type" : "app",
+
+    "info" : {
+        "package"         : "##pkgname##",
+        "name"            : "Known",
+        "tagline"         : "##pkgdesc##",
+        "description"     : "##description##",
+
+        "developer"       : "##developer##",
+        "maintainer"      : "##maintainer##",
+
+        "upstreamversion" : "##pkgver##",
+        "packageversion"  : "##pkgver##-##pkgrel##",
+
+        "licenses" : [
+            "##license##"
+        ]
+    },
+
+    "roles" : {
+        "apache2" : {
+            "defaultcontext" : "",
+            "depends" : [
+                "php",
+                "php-apache",
+                "php-gd",
+                "php-intl",
+                "php-oauth"
+            ],
+            "apache2modules" : [
+                "php5",
+                "rewrite"
+            ],
+            "phpmodules" : [
+                "gd",
+                "mysql",
+                "mysqli",
+                "oauth"
+            ],
+
+            "appconfigitems" : [
+                {
+                    "type" : "directorytree",
+                    "names" : [
+                        ".htaccess",
+                        "Idno",
+                        "IdnoPlugins",
+                        "css",
+                        "external",
+                        "gfx",
+                        "index.php",
+                        "js",
+                        "templates"
+                    ],
+                    "source" : "/usr/share/idno/idno/$2"
+                },
+                {
+                    "type" : "directory",
+                    "name" : "${appconfig.datadir}"
+                },
+                {
+                    "type" : "directory",
+                    "name" : "${appconfig.datadir}/uploads",
+                    "mode"  : "0755",
+                    "uname" : "${apache2.uname}",
+                    "gname" : "${apache2.gname}",
+                    "retentionpolicy"  : "keep",
+                    "retentionbucket"  : "uploads"
+                },
+                {
+                    "type"         : "file",
+                    "name"         : "config.ini",
+                    "template"     : "tmpl/config.ini.tmpl",
+                    "templatelang" : "varsubst"
+                }                
+            ]
+        },
+        "mysql" : {
+            "appconfigitems" : [
+                {
+                    "type"             : "mysql-database",
+                    "name"             : "maindb",
+                    "retentionpolicy"  : "keep",
+                    "retentionbucket"  : "maindb",
+                    "privileges"       : "all privileges"
+                }
+            ],
+            "installers" : [
+                {
+                    "name"   : "maindb",
+                    "type"   : "sqlscript",
+                    "source" : "idno/schemas/mysql/mysql.sql"
+                }
+            ]
+        }
+    }
+}

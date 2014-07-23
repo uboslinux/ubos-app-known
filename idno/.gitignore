@@ -1,0 +1,5 @@
+idno-*.pkg.tar.xz
+idno-*.pkg.tar.xz.sig
+pkg/
+src/
+idno/
