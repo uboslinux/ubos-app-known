@@ -2,7 +2,7 @@ developer=http://withknown.com/
 maintainer=http://indiebox.net/
 pkgname=$(basename $(pwd))
 pkgver=0.1
-pkgrel=9
+pkgrel=10
 pkgdesc="Publishing Platform for Everyone"
 arch=('any')
 url=${developer}
@@ -26,6 +26,12 @@ _parameterize=$(cat <<END
     s!##description##!$description!g;
 END
 )
+
+prepare() {
+  cd $srcdir/idno
+  git submodule init
+  git submodule update
+}
 
 package() {
 # Manifest
