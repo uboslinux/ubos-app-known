@@ -43,7 +43,6 @@
                 {
                     "type" : "directorytree",
                     "names" : [
-                        ".htaccess",
                         "Idno",
                         "IdnoPlugins",
                         "css",
@@ -73,7 +72,12 @@
                     "name"         : "config.ini",
                     "template"     : "tmpl/config.ini.tmpl",
                     "templatelang" : "varsubst"
-                }                
+                },
+                {
+                    "type"         : "file",
+                    "name"         : ".htaccess",
+                    "source"       : "tmpl/htaccess.tmpl"
+                }
             ]
         },
         "mysql" : {
