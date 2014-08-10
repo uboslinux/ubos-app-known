@@ -36,6 +36,7 @@
                 "gd",
                 "mysql",
                 "mysqli",
+                "pdo_mysql"
                 "oauth"
             ],
 
