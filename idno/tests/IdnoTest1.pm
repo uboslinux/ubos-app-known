@@ -23,11 +23,11 @@ use warnings;
 
 package IdnoTest1;
 
-use IndieBox::WebAppTest;
+use UBOS::WebAppTest;
 
 # The states and transitions for this test
 
-my $TEST = new IndieBox::WebAppTest(
+my $TEST = new UBOS::WebAppTest(
     appToTest   => 'idno',
     description => 'Tests whether idno comes up only.',
     testContext => '',

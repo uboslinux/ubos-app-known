@@ -1,8 +1,8 @@
-developer=http://withknown.com/
-maintainer=http://indiebox.net/
+developer=https://withknown.com/
+maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 pkgver=0.1
-pkgrel=13
+pkgrel=14
 pkgdesc="Publishing Platform for Everyone"
 arch=('any')
 url=${developer}
@@ -35,9 +35,9 @@ prepare() {
 
 package() {
 # Manifest
-    mkdir -p $pkgdir/var/lib/indiebox/manifests
-    perl -pe "$_parameterize" $startdir/indiebox-manifest.json > $pkgdir/var/lib/indiebox/manifests/${pkgname}.json
-    chmod 0644 $pkgdir/var/lib/indiebox/manifests/${pkgname}.json
+    mkdir -p $pkgdir/var/lib/ubos/manifests
+    perl -pe "$_parameterize" $startdir/ubos-manifest.json > $pkgdir/var/lib/ubos/manifests/${pkgname}.json
+    chmod 0644 $pkgdir/var/lib/ubos/manifests/${pkgname}.json
 
 # Icons
     mkdir -p $pkgdir/srv/http/_appicons/$pkgname
