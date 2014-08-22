@@ -32,7 +32,7 @@ my $TEST = new UBOS::WebAppTest(
     description => 'Tests whether idno comes up only.',
     testContext => '',
     checks      => [
-            new IndieBox::WebAppTest::StateCheck(
+            new UBOS::WebAppTest::StateCheck(
                     name  => 'virgin',
                     check => sub {
                         my $c = shift;
