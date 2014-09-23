@@ -2,24 +2,16 @@ developer=https://withknown.com/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-pkgver=0.1
-pkgrel=15
+pkgver=0.6.2
+pkgrel=1
 pkgdesc="Publishing Platform for Everyone"
 arch=('any')
 license=('Apache')
 groups=()
 depends=()
-makedepends=('rsync')
-backup=()
-source=( 'git+https://github.com/idno/idno.git#branch=master' )
+source=( "http://assets.withknown.com/releases/known-$pkgver.tgz" )
 options=('!strip')
-md5sums=('SKIP')
-
-prepare() {
-  cd $srcdir/idno
-  git submodule init
-  git submodule update
-}
+md5sums=('677a53e6f8f84bd39bd9ae1626af166d')
 
 package() {
 # Manifest
@@ -38,5 +30,6 @@ package() {
     mkdir -p $pkgdir/var/lib/${pkgname}
 
 # Code
-    rsync --quiet --archive --exclude '.git*' $startdir/src/idno $pkgdir/usr/share/${pkgname}
+    mkdir -p $pkgdir/usr/share/${pkgname}/idno
+    cp -r -p $srcdir/known-$pkgver/* $pkgdir/usr/share/${pkgname}/idno/
 }

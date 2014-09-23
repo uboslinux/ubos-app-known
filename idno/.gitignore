@@ -3,3 +3,4 @@ idno-*.pkg.tar.xz.sig
 pkg/
 src/
 idno/
+known-*.tgz
