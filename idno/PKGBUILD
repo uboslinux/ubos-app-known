@@ -2,7 +2,7 @@ developer=https://withknown.com/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-pkgver=0.6.2
+pkgver=0.6.4
 pkgrel=1
 pkgdesc="Publishing platform for everyone"
 arch=('any')
@@ -11,7 +11,7 @@ groups=()
 depends=()
 source=( "http://assets.withknown.com/releases/known-$pkgver.tgz" )
 options=('!strip')
-md5sums=('677a53e6f8f84bd39bd9ae1626af166d')
+md5sums=('d5731b9636a5fc9a5b64e7dc82951a87')
 
 package() {
 # Manifest
@@ -31,5 +31,5 @@ package() {
 
 # Code
     mkdir -p $pkgdir/usr/share/${pkgname}/idno
-    cp -r -p $srcdir/known-$pkgver/* $pkgdir/usr/share/${pkgname}/idno/
+    cp -r -p $srcdir/* $pkgdir/usr/share/${pkgname}/idno/
 }
