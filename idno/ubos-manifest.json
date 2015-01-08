@@ -20,7 +20,7 @@
 
     "roles" : {
         "apache2" : {
-            "defaultcontext" : "",
+            "fixedcontext" : "",
             "depends" : [
                 "php",
                 "php-apache",
