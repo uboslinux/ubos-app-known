@@ -31,7 +31,6 @@ my $TEST = new UBOS::WebAppTest(
     appToTest   => 'idno',
     description => 'Tests whether idno comes up only.',
     testContext => '',
-    hostname    => 'idno-test',
     checks      => [
             new UBOS::WebAppTest::StateCheck(
                     name  => 'virgin',
