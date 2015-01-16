@@ -28,10 +28,10 @@ use UBOS::WebAppTest;
 # The states and transitions for this test
 
 my $TEST = new UBOS::WebAppTest(
-    appToTest   => 'idno',
-    description => 'Tests whether idno comes up only.',
-    testContext => '',
-    checks      => [
+    appToTest        => 'idno',
+    description      => 'Tests whether idno comes up only.',
+    fixedTestContext => '',
+    checks           => [
             new UBOS::WebAppTest::StateCheck(
                     name  => 'virgin',
                     check => sub {
