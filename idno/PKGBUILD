@@ -2,8 +2,8 @@ developer=https://withknown.com/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-pkgver=0.6.5
-pkgrel=4
+pkgver=0.7
+pkgrel=1
 pkgdesc="Publishing platform for everyone"
 arch=('any')
 license=('Apache')
@@ -11,7 +11,7 @@ groups=()
 depends=()
 source=( "http://assets.withknown.com/releases/known-$pkgver.tgz" )
 options=('!strip')
-md5sums=('accbb268909682e38bc91359bdfa468b')
+md5sums=('c7dc3cdd00f62086241e95893037f0b0')
 
 package() {
 # Manifest
