@@ -11,7 +11,7 @@ groups=()
 depends=()
 source=( "http://assets.withknown.com/releases/known-$pkgver.tgz" )
 options=('!strip')
-md5sums=('c7dc3cdd00f62086241e95893037f0b0')
+md5sums=('2141df02a3913aea9eadf9df600f903d')
 
 package() {
 # Manifest
