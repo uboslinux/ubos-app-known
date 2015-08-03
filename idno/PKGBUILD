@@ -11,7 +11,7 @@ groups=()
 depends=()
 source=( "http://assets.withknown.com/releases/known-$pkgver.tgz" )
 options=('!strip')
-sha512sums=('29c2f540d2ac2446cee9c4df7ee8f092ebe4784ae213c860789042251a797c9ad597c2235b903555a95e0201c233f036b87622be3ced3e1d968d575440acb888')
+sha512sums=('bc91bd0333f6177e878f84f4c52e9d2e563b6e161ae157cb38e9d5a8deb43211a2896a8d4f70910a3f2ad310dff5debb07fd0f0e459bf76f053a3d4653bf4d74')
 
 package() {
 # Manifest
