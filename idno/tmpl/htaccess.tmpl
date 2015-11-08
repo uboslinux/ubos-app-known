@@ -17,40 +17,31 @@
     php_value post_max_size 1080M
 </IfModule>
 <Files  ~ "\.dist$">
-  Order allow,deny
-  Deny from all
+  Require all denied
 </Files>
 <Files ~ "known\.php">
-  Order allow,deny
-  Deny from all
+  Require all denied
 </Files>
 <Files  ~ "\.known">
-  Order allow,deny
-  Deny from all
+  Require all denied
 </Files>
 <Files  ~ "\.ini$">
-  Order allow,deny
-  Deny from all
+  Require all denied
 </Files>
 <Files ~ "\.yml$">
-  Order allow,deny
-  Deny from all
+  Require all denied
 </Files>
 <Files ~ "\.xml$">
-  Order allow,deny
-  Deny from all
+  Require all denied
 </Files>
 <Files ~ "sitemap\.xml">
-  Order allow,deny
-  Allow from all
+  Require all granted
 </Files>
 <Files ~ "feed\.xml">
-  Order allow,deny
-  Allow from all
+  Require all granted
 </Files>
 <Files ~ "rss\.xml">
-  Order allow,deny
-  Allow from all
+  Require all granted
 </Files>
 
 AddType video/ogg .ogv
