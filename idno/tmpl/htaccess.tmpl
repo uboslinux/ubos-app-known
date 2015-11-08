@@ -1,21 +1,56 @@
 <IfModule mod_rewrite.c>
     RewriteEngine on
-    RewriteRule ^(\.well\-known.*)$ /index.php/$1 [L]
-    RewriteRule ^\..* - [F]
+    #RewriteBase /
+
+    RewriteCond %{ENV:BASE} ^$
+    RewriteCond $1::%{REQUEST_URI} ^(.*)::(.*?)\1$
+    RewriteRule ^(.*)$ - [ENV=BASE:%2]
+
+    RewriteRule ^js/canary\.js$ %{ENV:BASE}/js/default.js [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond $1 !^(index\.php)
-    RewriteRule ^(.*)$ /index.php/$1 [L]
+    RewriteRule ^(.*)$ %{ENV:BASE}/index.php?/$1 [L,QSA]
+    RewriteRule ^Uploads.* - [F]
 </IfModule>
 <IfModule mod_php5.c>
     php_value upload_max_filesize 1000M
     php_value post_max_size 1080M
 </IfModule>
+<Files  ~ "\.dist$">
+  Order allow,deny
+  Deny from all
+</Files>
+<Files ~ "known\.php">
+  Order allow,deny
+  Deny from all
+</Files>
+<Files  ~ "\.known">
+  Order allow,deny
+  Deny from all
+</Files>
 <Files  ~ "\.ini$">
-    Require all denied
+  Order allow,deny
+  Deny from all
+</Files>
+<Files ~ "\.yml$">
+  Order allow,deny
+  Deny from all
 </Files>
 <Files ~ "\.xml$">
-    Require all denied
+  Order allow,deny
+  Deny from all
+</Files>
+<Files ~ "sitemap\.xml">
+  Order allow,deny
+  Allow from all
+</Files>
+<Files ~ "feed\.xml">
+  Order allow,deny
+  Allow from all
+</Files>
+<Files ~ "rss\.xml">
+  Order allow,deny
+  Allow from all
 </Files>
 
 AddType video/ogg .ogv

@@ -20,7 +20,8 @@
                 "mysql",
                 "mysqli",
                 "pdo_mysql",
-                "oauth"
+                "oauth",
+                "openssl"
             ],
 
             "appconfigitems" : [
