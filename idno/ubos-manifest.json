@@ -12,7 +12,7 @@
                 "php-oauth"
             ],
             "apache2modules" : [
-                "php5",
+                "php7",
                 "rewrite"
             ],
             "phpmodules" : [
