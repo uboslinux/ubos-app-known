@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Simple test for idno
+# Simple test for known
 #
 # Copyright (C) 2012-2014 Indie Computing Corp.
 #
@@ -21,15 +21,15 @@
 use strict;
 use warnings;
 
-package IdnoTest1;
+package KnownTest1;
 
 use UBOS::WebAppTest;
 
 # The states and transitions for this test
 
 my $TEST = new UBOS::WebAppTest(
-    appToTest        => 'idno',
-    description      => 'Tests whether idno comes up only.',
+    appToTest        => 'known',
+    description      => 'Tests whether known comes up only.',
     fixedTestContext => '',
     checks           => [
             new UBOS::WebAppTest::StateCheck(

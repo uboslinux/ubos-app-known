@@ -37,7 +37,7 @@
                         "js",
                         "templates"
                     ],
-                    "source" : "/usr/share/idno/idno/$2"
+                    "source" : "/usr/share/known/known/$2"
                 },
                 {
                     "type" : "directory",
@@ -79,7 +79,7 @@
                 {
                     "name"   : "maindb",
                     "type"   : "sqlscript",
-                    "source" : "idno/schemas/mysql/mysql.sql"
+                    "source" : "known/schemas/mysql/mysql.sql"
                 }
             ]
         }

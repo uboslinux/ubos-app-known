@@ -2,8 +2,8 @@ developer=https://withknown.com/
 url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
-pkgver=0.8.5
-pkgrel=4
+pkgver=0.9.0.2
+pkgrel=1
 pkgdesc="Known: Publishing platform for everyone"
 arch=('any')
 license=('Apache')
@@ -30,6 +30,6 @@ package() {
     mkdir -p $pkgdir/var/lib/${pkgname}
 
 # Code
-    mkdir -p $pkgdir/usr/share/${pkgname}/idno
-    cp -r -p $srcdir/* $pkgdir/usr/share/${pkgname}/idno/
+    mkdir -p $pkgdir/usr/share/${pkgname}/known
+    cp -r -p $srcdir/* $pkgdir/usr/share/${pkgname}/known/
 }
