@@ -3,7 +3,7 @@ url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 pkgver=0.9.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Known: Publishing platform for everyone"
 arch=('any')
 license=('Apache')
@@ -11,7 +11,7 @@ groups=()
 depends=()
 source=( "http://assets.withknown.com/releases/known-$pkgver.tgz" )
 options=('!strip')
-sha512sums=('60c2f2a956c3c14b18b97572a78ce7c3063cad4feabf948d459aef395573fc889ecf82bb7ac42fca2d24ce8590c691b0ffed4c8a98603ec3e0547e88c31c9917')
+sha512sums=('b025daf92252695ae2f8b093906fa632aaf8f85020ee8f9f369773d38cc3e0c270a04192a2e3582b6126d04dcb6566ecaf235f08dfa27f381f52fb1d279a3bbb')
 
 package() {
 # Manifest
