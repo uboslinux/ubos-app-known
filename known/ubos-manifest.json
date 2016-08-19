@@ -17,11 +17,9 @@
             ],
             "phpmodules" : [
                 "gd",
-                "mysql",
                 "mysqli",
                 "pdo_mysql",
-                "oauth",
-                "openssl"
+                "oauth"
             ],
 
             "appconfigitems" : [
