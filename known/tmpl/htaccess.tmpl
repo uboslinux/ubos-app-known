@@ -52,12 +52,10 @@
   Require all granted
 </Files>
 <Files ~ "warmup\/*\.*">
-  Order allow,deny
-  Allow from all
+  Require all granted
 </Files>
 <Files ~ "index\.php">
-  Order allow,deny
-  Allow from all
+  Require all granted
 </Files>
 
 <IfModule mod_headers.c>
