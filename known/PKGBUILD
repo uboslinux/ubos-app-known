@@ -3,7 +3,7 @@ url=${developer}
 maintainer=http://indiecomputing.com/
 pkgname=$(basename $(pwd))
 pkgver=0.9.2
-pkgrel=2
+pkgrel=3
 pkgdesc="Known: Publishing platform for everyone"
 arch=('any')
 license=('Apache')
@@ -31,5 +31,5 @@ package() {
 
 # Code
     mkdir -p $pkgdir/usr/share/${pkgname}/known
-    cp -r -p $srcdir/* $pkgdir/usr/share/${pkgname}/known/
+    rsync -r -a --filter '- ._*' $srcdir/* $pkgdir/usr/share/${pkgname}/known/
 }
