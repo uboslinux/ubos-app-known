@@ -59,7 +59,7 @@
                 {
                     "type"         : "file",
                     "name"         : "${appconfig.apache2.appconfigfragmentfile}",
-                    "template"     : "tmpl/htaccess.tmpl"
+                    "template"     : "tmpl/htaccess.tmpl",
                     "templatelang" : "varsubst"
                 }
             ]
