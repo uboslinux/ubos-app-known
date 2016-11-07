@@ -1,6 +1,10 @@
 # This has been changed from the shipped .htaccess file to
 # use PHP7 and the newer Apache syntax (Require vs Allow)
 
+<IfModule php7_module>
+    php_admin_value open_basedir ${appconfig.apache2.dir}:/tmp/:/usr/share/:${appconfig.datadir}/uploads
+</IfModule>
+
 <IfModule mod_rewrite.c>
     RewriteEngine on
     #RewriteBase /
