@@ -16,6 +16,7 @@
                 "rewrite"
             ],
             "phpmodules" : [
+                "exif",
                 "gd",
                 "mysqli",
                 "pdo_mysql",
