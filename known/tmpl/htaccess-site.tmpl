@@ -1,0 +1,3 @@
+<IfModule php7_module>
+    php_admin_value open_basedir ${appconfig.apache2.dir}:/tmp/:/usr/share/:${appconfig.datadir}/uploads
+</IfModule>
