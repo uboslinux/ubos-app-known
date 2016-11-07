@@ -58,8 +58,9 @@
                 },
                 {
                     "type"         : "file",
-                    "name"         : ".htaccess",
-                    "source"       : "tmpl/htaccess.tmpl"
+                    "name"         : "${appconfig.apache2.appconfigfragmentfile}",
+                    "template"     : "tmpl/htaccess.tmpl"
+                    "templatelang" : "varsubst"
                 }
             ]
         },
