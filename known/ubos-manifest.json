@@ -27,14 +27,18 @@
                 {
                     "type" : "directorytree",
                     "names" : [
-                        "Idno",
-                        "IdnoPlugins",
                         "css",
                         "external",
                         "gfx",
+                        "Idno",
+                        "IdnoPlugins",
                         "index.php",
                         "js",
-                        "templates"
+                        "statics",
+                        "templates",
+                        "Themes",
+                        "version.known",
+                        "warmup"
                     ],
                     "source" : "/usr/share/known/known/$2"
                 },
