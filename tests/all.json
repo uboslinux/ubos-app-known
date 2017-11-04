@@ -1,0 +1,22 @@
+{
+   "siteid" : "sd338aca60926ebfbdd17d7bc91624f739a1211b2",
+   "appconfigs" : [
+      {
+         "appconfigid" : "acd3f6be5d7f5928990a636c71c6b4a9065eaaebf",
+         "appid" : "known",
+         "accessoryids" : [
+            "known-plugin-linkedin",
+            "known-plugin-wordpress",
+            "known-plugin-mastodon"
+         ],
+         "context" : "/known"
+      }
+   ],
+   "hostname" : "*",
+   "admin" : {
+      "credential" : "qwerqwer",
+      "email" : "test@ubos.net",
+      "username" : "admin",
+      "userid" : "admin"
+   }
+}
