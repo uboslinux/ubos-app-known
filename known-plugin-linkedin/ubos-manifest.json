@@ -1,0 +1,22 @@
+{
+    "type"  : "accessory",
+
+    "accessoryinfo" : {
+        "appid"         : "known",
+        "accessoryid"   : "LinkedIn",
+        "accessorytype" : "plugin"
+    },
+
+    "roles" : {
+        "apache2" : {
+            "appconfigitems" : [
+                {
+                    "type"   : "directorytree",
+                    "name"   : "IdnoPlugins/LinkedIn",
+                    "source" : "LinkedIn",
+                }
+            ]
+        }
+    }
+}
+

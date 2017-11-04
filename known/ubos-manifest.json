@@ -27,6 +27,7 @@
                 {
                     "type" : "directorytree",
                     "names" : [
+                        "chrome",
                         "css",
                         "external",
                         "gfx",

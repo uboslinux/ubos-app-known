@@ -1,0 +1,22 @@
+{
+    "type"  : "accessory",
+
+    "accessoryinfo" : {
+        "appid"         : "known",
+        "accessoryid"   : "WordPress",
+        "accessorytype" : "plugin"
+    },
+
+    "roles" : {
+        "apache2" : {
+            "appconfigitems" : [
+                {
+                    "type"   : "directorytree",
+                    "name"   : "IdnoPlugins/WordPress",
+                    "source" : "WordPress",
+                }
+            ]
+        }
+    }
+}
+
