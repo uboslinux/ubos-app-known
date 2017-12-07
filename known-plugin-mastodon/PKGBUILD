@@ -9,6 +9,7 @@ pkgdesc="Syndicate your status to Mastodon"
 arch=('any')
 license=("Unknown")
 source=("git+http://github.com/danito/KnownMastodon.git#branch=master")
+releasepage=('https://github.com/danito/KnownMastodon#branch=master')
 depends=(
     'known'
 )

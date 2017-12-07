@@ -9,6 +9,7 @@ pkgdesc="Syndicate articles to WordPress blogs using XMLRPC"
 arch=('any')
 license=("apache2")
 source=("git+https://github.com/timmmmyboy/WordPress#branch=master")
+releasepage=('https://github.com/timmmmyboy/WordPress/blob/master/plugin.ini' )
 depends=(
     'known'
 )
