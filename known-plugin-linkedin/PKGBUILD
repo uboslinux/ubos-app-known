@@ -9,6 +9,7 @@ pkgdesc="Cross-post content to LinkedIn"
 arch=('any')
 license=("GPLv2")
 source=("git+https://github.com/mapkyca/KnownLinkedin#branch=master")
+releasepage=('https://github.com/mapkyca/KnownLinkedin#branch=master')
 depends=(
     'known'
 )

@@ -10,6 +10,7 @@ license=('Apache')
 groups=()
 depends=()
 source=( "http://assets.withknown.com/releases/known-$pkgver.tgz" )
+releasepage=( 'https://withknown.com/opensource/' )
 options=('!strip')
 sha512sums=('ccfe13340aa07a259504570cf0c090d272aed68e9cab071e9f5542b1dc27d46a4f9f113f3f4a3028b356fbc4bd82482a957a9f6aa2f1b9abb423c7f0d278e46f')
 
