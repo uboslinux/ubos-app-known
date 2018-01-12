@@ -4,10 +4,10 @@ maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/known-plugin-/}
 pkgver=0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="Syndicate articles to WordPress blogs using XMLRPC"
 arch=('any')
-license=("apache2")
+license=("Apache")
 source=("git+https://github.com/timmmmyboy/WordPress#branch=master")
 releasepage=('https://github.com/timmmmyboy/WordPress/blob/master/plugin.ini' )
 depends=(

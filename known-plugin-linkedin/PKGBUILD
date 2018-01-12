@@ -4,10 +4,10 @@ maintainer="http://indiecomputing.com/"
 pkgname=$(basename $(pwd))
 _plugin=${pkgname/known-plugin-/}
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Cross-post content to LinkedIn"
 arch=('any')
-license=("GPLv2")
+license=("GPL2")
 source=("git+https://github.com/mapkyca/KnownLinkedin#branch=master")
 releasepage=('https://github.com/mapkyca/KnownLinkedin#branch=master')
 depends=(
