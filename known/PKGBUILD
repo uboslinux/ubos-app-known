@@ -9,10 +9,15 @@ arch=('any')
 license=('Apache')
 groups=()
 depends=()
-source=( "http://assets.withknown.com/releases/known-$pkgver.tgz" )
+if [[ -z ${USE_GIT} ]]; then
+    source=( "http://assets.withknown.com/releases/known-$pkgver.tgz" )
+    sha512sums=('ccfe13340aa07a259504570cf0c090d272aed68e9cab071e9f5542b1dc27d46a4f9f113f3f4a3028b356fbc4bd82482a957a9f6aa2f1b9abb423c7f0d278e46f')
+else
+    source=( "git+https://github.com/idno/Known.git" );
+    sha512sums=('SKIP')
+fi
 releasepage=( 'https://withknown.com/opensource/' )
 options=('!strip')
-sha512sums=('ccfe13340aa07a259504570cf0c090d272aed68e9cab071e9f5542b1dc27d46a4f9f113f3f4a3028b356fbc4bd82482a957a9f6aa2f1b9abb423c7f0d278e46f')
 
 package() {
 # Manifest
@@ -32,5 +37,9 @@ package() {
 
 # Code
     mkdir -p $pkgdir/usr/share/${pkgname}/known
-    rsync -r -a --filter '- ._*' $srcdir/* $pkgdir/usr/share/${pkgname}/known/
+    if [[ -z ${USE_GIT} ]]; then
+        rsync -r -a --filter '- ._*' $srcdir/* $pkgdir/usr/share/${pkgname}/known/
+    else
+        rsync -r -a --filter '- ._*' $srcdir/Known/* $pkgdir/usr/share/${pkgname}/known/
+    fi
 }
