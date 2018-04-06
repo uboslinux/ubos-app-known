@@ -41,7 +41,7 @@
                         "version.known",
                         "warmup"
                     ],
-                    "source" : "/usr/share/known/known/$2"
+                    "source" : "known/$2"
                 },
                 {
                     "type" : "directory",
