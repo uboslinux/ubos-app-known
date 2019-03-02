@@ -4,6 +4,6 @@
 
 <IfModule php7_module>
     <Directory "${appconfig.apache2.dir}">
-        php_admin_value open_basedir ${appconfig.apache2.dir}:/tmp/:/ubos/share/:${appconfig.datadir}/uploads
+        php_admin_value open_basedir ${appconfig.apache2.dir}:/tmp/:/ubos/tmp/:/ubos/share/:${appconfig.datadir}/uploads
     </Directory>
 </IfModule>
