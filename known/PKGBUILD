@@ -16,7 +16,7 @@ else
     source=( "git+https://github.com/idno/Known.git" );
     sha512sums=('SKIP')
 fi
-releasepage=( 'https://withknown.com/opensource/' )
+releasepage=( 'https://github.com/idno/known/releases' )
 options=('!strip')
 
 package() {
