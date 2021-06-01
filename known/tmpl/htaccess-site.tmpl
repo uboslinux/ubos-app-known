@@ -2,7 +2,7 @@
 # Copyright (C) 2014 and later, Indie Computing Corp. All rights reserved. License: see package.
 #
 
-<IfModule php7_module>
+<IfModule php_module>
     <Directory "${appconfig.apache2.dir}">
         php_admin_value open_basedir ${appconfig.apache2.dir}:/tmp/:/ubos/tmp/:/ubos/share/:${appconfig.datadir}/uploads
     </Directory>
